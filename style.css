@@ -1,0 +1,132 @@
+* {
+    font-family: sans-serif;
+    line-height: 1.614em;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 13pt;
+    margin-top: 1em;
+}
+header, main section, .projects-skills, footer{
+    margin: 0 auto;
+    max-width: 1300px;
+}
+
+/* HEADER ===================================================================================*/
+header {
+    padding: 2em 0;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows:75px 2fr;
+    gap: 1px 1px;
+}
+header h1{
+    font-size: 3em;
+}
+header span {
+    background: rgba(197, 197, 250, 0.404);
+    font-size: 1.6em;
+    font-family: Stardew, sans-serif;
+    color: #888;
+    padding: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+header p {
+    font-size: 16pt;
+    padding: 1em auto;
+}
+header img{
+    grid-column-start: 2;
+    grid-row-start: 2;
+    max-width: 250px;
+    max-height: 250px;
+    width: 100%;
+    height: 100%;
+}
+#about-me {
+    background: rgba(197, 197, 250, 0.404);
+}
+/* SECTIONS ==================================================================*/
+#socials {
+    background: #000;
+    color: white;
+    width: 100%;
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 10fr 1fr 1fr 1fr;
+}
+#socials h1{
+    margin: auto 8em;
+}
+.buttons{
+    display: flex;
+}
+.buttons img{
+    display: flex;
+    height: 64px;
+    align-items: center;
+    margin: .4em 1em;
+}
+.buttons a:hover{
+    background-color:rgba(133, 133, 240, 0.397);
+}
+
+
+.projects-skills {
+    display: grid;
+    gap: 2em;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: auto;
+    text-align: start;
+}
+#projgrid{
+    display: grid;
+    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100%;
+}
+#projgrid img{
+    height: 200px;
+    width: 360px;
+}
+.projects-skills p{
+    margin: 1em auto;
+}
+
+
+/* NAV PANEL =====================================*/
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+    font-size: 16pt;
+}
+nav a{
+    padding: 0.5em 7em;
+    text-decoration: none;
+    color: #fff;
+}
+nav a:hover{
+    background-color: rgba(149, 149, 255, 0.212)
+}
+/* FOOTER =====================================*/
+footer {
+    margin-top: 1em;
+    margin-bottom: 0;
+    background: #777;
+    color: white;
+    padding: 0.1em 0;
+    text-align: center;
+    /* position: fixed; */
+    min-width: 100%;
+    bottom: 0%;
+}
