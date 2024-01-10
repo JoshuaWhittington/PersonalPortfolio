@@ -1,4 +1,5 @@
 body{
+    font-size: 16pt;
     margin: 0;
     font-family: Arial, sans-serif;
     display: flex;
@@ -11,6 +12,7 @@ section{
 
 
 #fixed-left{
+    position: relative;
     text-align: center;
     width: 40%;
     background-color: rgb(0, 22, 56);
@@ -31,6 +33,60 @@ section{
     display: block;
 }
 
+.corner-bracket::before,
+.corner-bracket::after {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 200px;
+    border: 10px solid #ffffff;
+    z-index: -1;
+}
+
+.corner-bracket::before{
+    top: .5em;
+    left: .5em;
+    /* border-top-left-radius: 10px; */
+    border-width: 10px 0 0 10px;
+}
+.corner-bracket::after{
+    bottom: .5em;
+    right: .5em;
+    /* border-bottom-right-radius: 10px; */
+    border-width: 0 10px 10px 0;
+}
+
+#fixed-left .animated-name,
+#fixed-left .animated-blurb,
+#fixed-left #navdiv {
+    margin-top: 20px; 
+}
+
+
+#navdiv{
+    position: absolute;
+    text-align: right;
+    bottom: 0;
+    right: 0;
+    margin-right: 2em;
+}
+#navdiv ul{
+    list-style-type: none;
+    column-count: 2;
+    column-gap: 5rem;
+}
+#navdiv li{
+    margin-bottom: 1em;
+    
+}
+#navdiv a{
+    text-decoration: none;
+    color: white;
+    font-size: 20pt;
+}
+#navdiv a:hover{
+    color: rgb(175, 175, 175);
+}
 
 
 #scrolling-right{
@@ -43,14 +99,14 @@ section{
 }
 
 /* ANIMATIONS */
-#animated-name, #animated-blurb{
+.animated-name, .animated-blurb{
     opacity: 0;
     transform: translateY(20px);
 }
-#animated-name.animate{
+.animated-name.animate{
     animation: fadeIn 2s ease-out forwards;
 }
-#animated-blurb.animate{
+.animated-blurb.animate{
     animation: fadeIn 2s ease-out forwards;
 }
 
