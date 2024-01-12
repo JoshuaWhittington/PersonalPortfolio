@@ -87,9 +87,14 @@ section{
 #navdiv a:hover{
     color: rgb(175, 175, 175);
 }
+#navdiv img{
+    height: 3.7em;
+    margin-left: .7em;
+}
 
 
 #scrolling-right{
+    background-color: rgba(228, 228, 228, 0.815);
     width: 60%;
     padding: 50px;
     box-sizing: border-box;
